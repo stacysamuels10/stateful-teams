@@ -5,10 +5,9 @@ export default function DefaultTeam({ students }) {
   return (
     <div className="defaultteam">
       <h1>Default</h1>
+
       {students?.map((student) => (
-        <div className="studentCardContainer">
-          <Student student={student} />
-        </div>
+        <Student student={student} />
       ))}
     </div>
   );

@@ -18,6 +18,7 @@ function App() {
     <div className="topcontainer">
       <h1>Student Team React Challenge</h1>
       <button
+        className="button-24"
         onClick={() =>
           console.log("I should reset you back to all being in default")
         }

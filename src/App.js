@@ -1,19 +1,10 @@
 import "./App.css";
 import MainContainer from "./components/MainContainer";
-import { useState } from "react";
-import ciara from "./assets/ciara.png";
-import jason from "./assets/jason.png";
-import rayleigh from "./assets/rayleigh.png";
-import santos from "./assets/santos.png";
+
+import { useSelector } from "react-redux";
 
 function App() {
-  const studentData = [
-    { name: "Ciara", img: ciara },
-    { name: "Rayleigh", img: rayleigh },
-    { name: "Santos", img: santos },
-    { name: "Jason", img: jason },
-  ];
-  const [students, setStudents] = useState(studentData);
+  const students = useSelector((state) => state.students);
   return (
     <div className="topcontainer">
       <h1>Student Team React Challenge</h1>

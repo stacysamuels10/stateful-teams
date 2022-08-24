@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function BinaryBots() {
+export default function BackEnd() {
   return (
     <div className="binarybots">
-      <h1>Binary Bots</h1>
+      <h1>BackEnd</h1>
     </div>
   );
 }

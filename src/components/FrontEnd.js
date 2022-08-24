@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function BcCrew() {
+export default function FrontEnd() {
   return (
     <div className="bc-crew">
-      <h1>BC Crew</h1>
+      <h1>FrontEnd</h1>
     </div>
   );
 }

@@ -7,6 +7,7 @@ import ethan from "../assets/ethan.png";
 import amanda from "../assets/amanda.png";
 import coolstacy from "../assets/coolstacy.png";
 import blake from "../assets/blake.png";
+import carlos from "../assets/carlos.png";
 const initialState = {
   students: [
     { name: "West", img: West },
@@ -17,7 +18,7 @@ const initialState = {
     { name: "Amanda", img: amanda },
     { name: "Andrea", img: andrea },
     { name: "Stacy", img: coolstacy },
-    { name: "Carlos", img: "" },
+    { name: "Carlos", img: carlos },
     { name: "Blake", img: blake },
   ],
 };

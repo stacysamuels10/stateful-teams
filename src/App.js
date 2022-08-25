@@ -2,14 +2,15 @@ import "./App.css";
 import MainContainer from "./components/MainContainer";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import studentFunctions from "./reducers/rootReducer";
+import inputStudent from "./reducers/inputStudentReducer";
+import frontEndReducer from "./reducers/rootReducer";
+import backEndReducer from "./reducers/rootReducer";
 
 function App() {
-  console.log(studentFunctions);
-  const students = useSelector((state) => state.studentFunctions.students);
-  const frontend = useSelector((state) => state.studentFunctions.frontend);
-  const backend = useSelector((state) => state.studentFunctions.backend);
-  const setStudent = useSelector((state) => state.studentFunctions.setStudent);
+  const students = useSelector((state) => state.inputStudent.students);
+  const frontend = useSelector((state) => state.frontEndReducer.frontend);
+  const backend = useSelector((state) => state.backEndReducer.backend);
+  const setStudent = useSelector((state) => state.inputStudent.setStudent);
   const dispatch = useDispatch();
   return (
     <div className="topcontainer">
@@ -41,6 +42,7 @@ function App() {
           students={students}
           frontend={frontend}
           backend={backend}
+          setStudent={setStudent}
         />
       </div>
     </div>

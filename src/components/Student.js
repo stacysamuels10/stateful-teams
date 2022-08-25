@@ -1,5 +1,15 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import {
+  frontEndBackEnd,
+  frontEndDefault,
+  frontEndFrontEnd,
+} from "../actions/setFrontEnd";
+import {
+  backEndBackEnd,
+  backEndFrontEnd,
+  backEndDefault,
+} from "../actions/setBackEnd";
 
 export default function Student({ student }) {
   const dispatch = useDispatch();
@@ -13,7 +23,12 @@ export default function Student({ student }) {
         <button
           className={`button-24 ${frontend.includes(student) ? "hide" : ""}`}
           onClick={() =>
-            dispatch({ type: "ADD_TO_FRONT_END", payload: student })
+            dispatch(
+              frontEndBackEnd,
+              frontEndDefault,
+              frontEndFrontEnd,
+              student
+            )
           }
         >
           Front Enders 4 Lyfe
@@ -21,7 +36,7 @@ export default function Student({ student }) {
         <button
           className={`button-24 ${backend.includes(student) ? "hide" : ""}`}
           onClick={() =>
-            dispatch({ type: "ADD_TO_BACK_END", payload: student })
+            dispatch(backEndBackEnd, backEndDefault, backEndFrontEnd, student)
           }
         >
           In the Backend, it totally matters
